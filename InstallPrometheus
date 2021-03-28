@@ -60,9 +60,10 @@ ExecStart=/usr/local/bin/prometheus \
 [Install]  
 WantedBy=multi-user.target  
   
-  
-sudo systemctl daemon-reload  
+#enable prometheus at startup  
 sudo systemctl enable prometheus  
+#start prometheus service  
 sudo systemctl start prometheus  
+#check the status  
 sudo systemctl status prometheus  
 
