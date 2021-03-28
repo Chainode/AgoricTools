@@ -1,0 +1,24 @@
+#Install and Configure 
+
+sudo apt install software-properties-common  
+  
+wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -  
+sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"  
+sudo apt update  
+apt-cache policy grafana  
+sudo apt install grafana  
+
+#install grafana pie chart plugin  
+sudo grafana-cli plugins install grafana-piechart-panel  
+
+#start grafana server  
+sudo systemctl start grafana-server  
+#enble grafana server at startup  
+sudo systemctl enable grafana-server  
+#check status of grafana server  
+sudo systemctl status grafana-server  
+  
+  
+As an end result you should be able to reach your grafana endpoint by calling it in a browser window: IP:3000  
+By default port 3000 is used then default user is admin and the password is admin, which is strongly recommend to change to much stronger password.  
+Also make sure that your firewall allows you to connect to your grafana endpoint.
