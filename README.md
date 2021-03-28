@@ -1,12 +1,11 @@
 # AgoricTools
-Monitoring & Alerting Agoric Validator
+Monitoring Agoric Validator
 
 Tools required:  
-Prometheus  
-Node Exporter  
-AlertManager  
-Grafana  
-Grafana Pie Chart plugin  
+Prometheus  --> please check InstallPrometheus in this repo  
+Node Exporter  --> please check guide nstallNodeExporter in this repo  
+Grafana  --> please check guide InstallGrafana in this repo  
+Grafana Pie Chart plugin  --> please check guide InstallGrafana in this repo  
 
 
 
