@@ -1,0 +1,68 @@
+#Prometheus Installation  
+
+sudo apt-cache policy prometheus  
+
+#create prometheus user  
+sudo useradd -M -r -s /bin/false prometheus  
+
+#create prometheus directories  
+sudo mkdir /etc/prometheus /var/lib/prometheus  
+
+#dowload binaries  
+wget https://github.com/prometheus/prometheus/releases/download/v2.18.1/prometheus-2.18.1.linux-amd64.tar.gz  
+
+#extract and install  
+tar xzf prometheus-2.18.1.linux-amd64.tar.gz  
+sudo cp prometheus-2.18.1.linux-amd64/{prometheus,promtool} /usr/local/bin/  
+sudo chown prometheus:prometheus /usr/local/bin/{prometheus,promtool}  
+sudo cp -r prometheus-2.18.1.linux-amd64/{consoles,console_libraries} /etc/prometheus/  
+
+
+#prometheus config  
+sudo cp prometheus-2.18.1.linux-amd64/prometheus.yml /etc/prometheus/prometheus.yml  
+sudo nano /etc/prometheus/prometheus.yml  
+
+#configuration for scraping  
+    static_configs:  
+    - targets: ['localhost:9090']  
+  
+  - job_name: 'Agoric-Validator'  
+    static_configs:  
+      - targets: ['localhost:26660']  
+        labels:  
+          group: 'Validator'  
+  
+  - job_name: node  
+    static_configs:  
+      - targets: ['localhost:9100']  
+        
+sudo chown -R prometheus:prometheus /etc/prometheus  
+sudo chown prometheus:prometheus /var/lib/prometheus  
+  
+#create systemd for prometheus  
+sudo nano /etc/systemd/system/prometheus.service  
+
+[Unit]  
+Description=Prometheus Time Series Collection and Processing Server  
+Wants=network-online.target  
+After=network-online.target  
+  
+[Service]  
+User=prometheus  
+Group=prometheus  
+Type=simple  
+ExecStart=/usr/local/bin/prometheus \  
+    --config.file /etc/prometheus/prometheus.yml \  
+    --storage.tsdb.path /var/lib/prometheus/ \  
+    --web.console.templates=/etc/prometheus/consoles \  
+    --web.console.libraries=/etc/prometheus/console_libraries  
+  
+[Install]  
+WantedBy=multi-user.target  
+  
+  
+sudo systemctl daemon-reload  
+sudo systemctl enable prometheus  
+sudo systemctl start prometheus  
+sudo systemctl status prometheus  
+
