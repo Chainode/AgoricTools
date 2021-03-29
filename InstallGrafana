@@ -13,7 +13,7 @@ sudo grafana-cli plugins install grafana-piechart-panel
 
 #start grafana server  
 sudo systemctl start grafana-server  
-#enble grafana server at startup  
+#enale grafana server at startup  
 sudo systemctl enable grafana-server  
 #check status of grafana server  
 sudo systemctl status grafana-server  
@@ -22,3 +22,5 @@ sudo systemctl status grafana-server
 As an end result you should be able to reach your grafana endpoint by calling it in a browser window: IP:3000  
 By default port 3000 is used then default user is admin and the password is admin, which is strongly recommend to change to much stronger password.  
 Also make sure that your firewall allows you to connect to your grafana endpoint.
+
+In Grafana first add a prometheus as new data source under Configuration. Define "Prometheus" as name for the data source and as URL enter "http://localhost:9091" if you are running all components (grafana and prometheus on the same instance).
