@@ -16,3 +16,7 @@ In combination with an Alertmanager it becomes a viable solution to monitor and 
 * Node Exporter  --> please check guide InstallNodeExporter in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallNodeExporter  
 * Grafana  --> please check guide InstallGrafana in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallGrafana   
 * Grafana Pie Chart plugin  --> please check guide InstallGrafana in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallGrafana  
+
+
+## Final Result  
+![image](https://user-images.githubusercontent.com/53407923/112890048-ad4f7980-90d6-11eb-82b8-17e275141f28.png)
