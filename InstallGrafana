@@ -1,7 +1,7 @@
 #Install and Configure 
 
+#install packages and grafana  
 sudo apt install software-properties-common  
-  
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -  
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"  
 sudo apt update  
@@ -13,8 +13,10 @@ sudo grafana-cli plugins install grafana-piechart-panel
 
 #start grafana server  
 sudo systemctl start grafana-server  
+  
 #enale grafana server at startup  
 sudo systemctl enable grafana-server  
+  
 #check status of grafana server  
 sudo systemctl status grafana-server  
   
