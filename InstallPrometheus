@@ -24,7 +24,7 @@ sudo nano /etc/prometheus/prometheus.yml
 
 #configuration for scraping  
     static_configs:  
-    - targets: ['localhost:9090']  
+    - targets: ['localhost:9091']  
   
   - job_name: 'Agoric-Validator'  
     static_configs:  
