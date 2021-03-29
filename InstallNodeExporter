@@ -21,3 +21,10 @@ ExecStart=/home/<your-user>/node_exporter-1.0.1.linux-amd64/node_exporter
   
 [Install]  
 WantedBy=multi-user.target  
+
+#start node exporter  
+sudo systemctl start node_exporter  
+#enable node exporter at startup  
+sudo systemctl enable node_exporter    
+#check status of node exporter  
+sudo systemctl status node_exporter    
