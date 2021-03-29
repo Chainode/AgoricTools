@@ -1,5 +1,0 @@
-To enable the exporting of Tendermint metrics, you need to change the contents of your ~/.ag-chain-cosmos/config/config.toml in the [instrumentation] section:
-
-[instrumentation]
-prometheus = true
-prometheus_listen_addr = ":26660"
