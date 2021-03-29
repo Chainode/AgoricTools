@@ -11,8 +11,8 @@ In combination with an Alertmanager it becomes a viable solution to monitor and 
 
 
 ## Prerequisites
-* Enable export of tendermint metrics --> please check EnableTendermintMetrics in this repo
-* Prometheus  --> please check InstallPrometheus in this repo  
-* Node Exporter  --> please check guide InstallNodeExporter in this repo  
-* Grafana  --> please check guide InstallGrafana in this repo  
-* Grafana Pie Chart plugin  --> please check guide InstallGrafana in this repo  
+* Enable export of tendermint metrics --> please check EnableTendermintMetrics in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/EnableTendermintMetrics  
+* Prometheus  --> please check InstallPrometheus in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallPrometheus  
+* Node Exporter  --> please check guide InstallNodeExporter in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallNodeExporter  
+* Grafana  --> please check guide InstallGrafana in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallGrafana   
+* Grafana Pie Chart plugin  --> please check guide InstallGrafana in this repo: https://github.com/Chainode/AgoricTools/blob/e2474f8611bb36e0c805662813c8f9a82faa7a1e/InstallGrafana  
