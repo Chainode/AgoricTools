@@ -1,7 +1,7 @@
 # AgoricTools
-##Monitoring Agoric Validator
+## Monitoring Agoric Validator
 
-##Prerequisites
+## Prerequisites
 * Enable export of tendermint metrics --> please check EnableTendermintMetrics in this repo
 * Prometheus  --> please check InstallPrometheus in this repo  
 * Node Exporter  --> please check guide InstallNodeExporter in this repo  
