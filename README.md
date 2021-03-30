@@ -17,6 +17,9 @@ In combination with an Alertmanager it becomes a viable solution to monitor and 
 * Grafana  --> please check guide InstallGrafana in this repo: https://github.com/Chainode/AgoricTools/blob/main/InstallGrafana.md   
 * Grafana Pie Chart plugin  --> please check guide InstallGrafana in this repo: https://github.com/Chainode/AgoricTools/blob/main/InstallGrafana.md  
 
+## Import Agoric Validator Dashboard into Grafana  
+For this you will have to download the AgoricValidator.json from this repo and then in Grafana go to *Dashboards* -> *Manage* -> *Import* -> *Upload JSON file* and select the AgoricValidator.json to be uploaded.  
+As a next step you should make sure the right Prometheus connection has been selected and if necessary adapt the Dashboard. 
 
 ## Final Result  
 ![image](https://user-images.githubusercontent.com/53407923/112890048-ad4f7980-90d6-11eb-82b8-17e275141f28.png)
