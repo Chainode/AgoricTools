@@ -1,24 +1,34 @@
 # Install and Configure Grafana
 
 ### Install necessary packages and grafana  
+```
 sudo apt install software-properties-common  
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -  
 sudo add-apt-repository "deb https://packages.grafana.com/oss/deb stable main"  
 sudo apt update  
 sudo apt-cache policy grafana  
 sudo apt install grafana  
+```
 
 ### Install grafana pie chart plugin  
+```
 sudo grafana-cli plugins install grafana-piechart-panel  
+```
 
 ### Start grafana server  
+```
 sudo systemctl start grafana-server  
+```
   
 ### Enable grafana server at startup  
+```
 sudo systemctl enable grafana-server  
+```
   
-### Check the status of grafana server  
+### Check the status of grafana server 
+```
 sudo systemctl status grafana-server  
+```
   
   
 As an end result you should be able to reach your grafana endpoint by calling it in a browser window: http://IP:3000  
