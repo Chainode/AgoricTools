@@ -5,12 +5,12 @@
 sudo apt-cache policy prometheus  
 ```
 
-### Create prometheus user  
+### Create Prometheus user  
 ```
 sudo useradd -M -r -s /bin/false prometheus  
 ```
 
-### Create prometheus directories  
+### Create Prometheus directories  
 ```
 sudo mkdir /etc/prometheus /var/lib/prometheus  
 ```
